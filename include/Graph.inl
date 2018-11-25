@@ -23,11 +23,11 @@ Graph<T>::~Graph() {
             delete node;
             node = nullptr;
         }
-    }
+    }/*
     if (m_coloration != nullptr) {
         delete m_coloration;
         m_coloration = nullptr;
-    }
+    }*/
 }
 
 template <typename T>
@@ -247,11 +247,11 @@ bool Graph<T>::valid_coloration() {
 
 template <typename T>
 bool Graph<T>::erase_coloration() {
-    delete m_coloration;
+    //delete m_coloration;
     m_coloration = nullptr;
-    for (auto node : m_data) {
+    /*for (auto node : m_data) {
         node->erase_color();
-    }
+    }*/
     return true;
 }
 
